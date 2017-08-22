@@ -1,2 +1,4 @@
 # InsertionSort
-O Insertion sort é um algoritmo simples e eficiente quando aplicado em pequenas listas. Neste algoritmo a lista é percorrida da esquerda para a direita, à medida que avança vai deixando os elementos mais à esquerda ordenados.
+##Para executar o InsertionSort.c: ####gcc -g InsertionSort.c -o ord ####./ord númerodoalgoritmo < example.in > nomedoarquivodesaida.out
+# SelectionSort
+##Para executar o SelectionSort.c: ####gcc -g SelectionSort.c -o ord ####./ord númerodoalgoritmo < example.in > nomedoarquivodesaida.out
