@@ -1,18 +1,33 @@
-#include <stdio.h>
-main()
-{
-int i,j,x,min,k;
-int a[5]={5,3,2,4,1};
-for(i=0;i<5;i++) {
-	min=i;
-	for(j=i+1;j<5;j++) {
-		if(a[min]>a[j]) {
-			min=j;
-	}
-	x=a[min];
-	a[min]=a[j];
-	a[j]=x;
-}	}
-for(k=0;k<5;k++) {printf("%d ",a[k]);}
-	printf("\n");
-}
+import random
+import time
+
+def selection_sort(v):
+	i=0
+	while i < len (v) - 1:
+		menor = i
+		j = i + 1
+		# em busca do menor elemento
+		while j < len(v):
+			if v[j] < v[menor]:
+				menor = j
+			j += 1
+
+		#verifica se precisa realizar a troca	
+		if menor != i:
+			temp = v[i]
+			v[i] = v[menor]
+			v[menor] = temp
+
+		i +=1
+
+vetor = list(range(0,10))
+random.shuffle(vetor)
+antes = time.time()
+selection_sort(vetor)
+depois = time.time()
+total = (depois- antes) *1000
+
+print (vetor)
+print ("O tempo total para ordenar: %0.2f ms" % total)
+
+
