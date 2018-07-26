@@ -1,24 +1,23 @@
+
 import random
 import time
 
-def insertion_sort(v):
-    i= 1
-    while i < len(v):
-        temp = v[i]
-        trocou = False
-        j = i - 1
-        while j >= 0 and v[j] > temp:
-            v[j+1] = v[j]
-            trocou = True
-            j -= 1
+def insertion(list1):
+  for i in range( 1, len(list1)):
+    key = list1[i]
+    k = i
+    while k > 0 and key < list1[k - 1]:
+        list1[k] = list1[k - 1]
+        k -= 1
+	list1[k] = key
 
 vetor = list(range(0,10))
 random.shuffle(vetor)
 antes = time.time()
-insertion_sort(vetor)
+insertion (vetor)
 depois = time.time()
 total = (depois - antes) *1000
             
 print(vetor)
 
-print("O tempo total foi: %0.2f ms" % total)            
+print("O tempo total foi: %0.2f ms" % total) 
