@@ -1,5 +1,5 @@
 
-import random
+#import random
 import time
 
 def insertion(list1):
@@ -11,8 +11,10 @@ def insertion(list1):
         k -= 1
 	list1[k] = key
 
-vetor = list(range(0,10))
-random.shuffle(vetor)
+f = open('num.1000.1.in', 'r')
+vetor = f.readlines()
+#vetor = list(range(0,10))
+#random.shuffle(vetor)
 antes = time.time()
 insertion (vetor)
 depois = time.time()
