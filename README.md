@@ -1,4 +1,4 @@
 # InsertionSort
-##Para executar o InsertionSort.c: ####gcc -g InsertionSort.c -o ord ####./ord númerodoalgoritmo < example.in > nomedoarquivodesaida.out
+##Para executar o InsertionSort.c: #python insertion_sort.py
 # SelectionSort
-##Para executar o SelectionSort.c: ####gcc -g SelectionSort.c -o ord ####./ord númerodoalgoritmo < example.in > nomedoarquivodesaida.out
+##Para executar o SelectionSort.c: #python selection_sort.py
