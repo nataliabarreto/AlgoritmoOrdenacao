@@ -1,4 +1,4 @@
-import random
+#import random
 import time
 
 def selection_sort(v):
@@ -20,8 +20,10 @@ def selection_sort(v):
 
 		i +=1
 
-vetor = list(range(0,10))
-random.shuffle(vetor)
+f = open('num.1000.1.in', 'r')
+vetor = f.readlines()
+#vetor = list(range(0,10))
+#random.shuffle(vetor)
 antes = time.time()
 selection_sort(vetor)
 depois = time.time()
@@ -29,5 +31,3 @@ total = (depois- antes) *1000
 
 print (vetor)
 print ("O tempo total para ordenar: %0.2f ms" % total)
-
-
