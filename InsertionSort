@@ -1,20 +1,23 @@
 
-#import random
 import time
 
-def insertion(list1):
-  for i in range( 1, len(list1)):
-    key = list1[i]
-    k = i
-    while k > 0 and key < list1[k - 1]:
-        list1[k] = list1[k - 1]
-        k -= 1
-	list1[k] = key
+def insertion(v):
+
+	i=1
+	while i < len(v):
+		atual = v[i]
+		j = i-1
+
+		while (j >= 0) and (atual < v[j]):
+			v[j+1] = v[j]
+			j = j-1
+
+		v[j+1]= atual
+		i = i+1
+
 
 f = open('num.1000.1.in', 'r')
 vetor = f.readlines()
-#vetor = list(range(0,10))
-#random.shuffle(vetor)
 antes = time.time()
 insertion (vetor)
 depois = time.time()
